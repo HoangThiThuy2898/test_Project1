@@ -1,6 +1,6 @@
 drop database if exists ProjectDB;
-create database Project1DB;
-use project1DB;
+create database ProjectDB;
+use projectDB;
 
 create table users(
 userId int auto_increment not null primary key,
@@ -12,9 +12,10 @@ dateOfBirth date
 );
 
 create table categorys(
-categoryId varchar(20) primary key not null,
+categoryId int primary key not null auto_increment,
 categoryName varchar(255) not null
 );
+
 
 
 create table items(
@@ -22,7 +23,7 @@ itemId varchar(20) primary key not null,
 itemName varchar(255) not null,
 quantity int not null,
 price decimal(20,2) not null,
-categoryId varchar(20) not null,
+categoryId int not null,
 description varchar(500),
 constraint fk_Items_category foreign key(categoryId) references categorys(categoryId)
 );
