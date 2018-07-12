@@ -24,7 +24,6 @@ itemName varchar(255) not null,
 quantity int not null,
 price decimal(20,2) not null,
 categoryId int not null,
-description varchar(500),
 constraint fk_Items_category foreign key(categoryId) references categorys(categoryId)
 );
 
