@@ -2,7 +2,7 @@ drop database if exists ProjectDB;
 create database ProjectDB;
 use projectDB;
 
-create table users(
+create table User(
 userId int auto_increment not null primary key,
 userName varchar(255) not null,
 pass varchar(255) not null,
